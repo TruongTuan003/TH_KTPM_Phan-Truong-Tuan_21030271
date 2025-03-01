@@ -1,4 +1,4 @@
-package singleton;
+package fit.singleton.pattern;
 
 import java.lang.reflect.Constructor;
 

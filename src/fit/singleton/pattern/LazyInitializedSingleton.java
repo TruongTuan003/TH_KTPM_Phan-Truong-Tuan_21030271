@@ -1,4 +1,4 @@
-package singleton;
+package fit.singleton.pattern;
 
 public class LazyInitializedSingleton {
 	private static LazyInitializedSingleton instance;

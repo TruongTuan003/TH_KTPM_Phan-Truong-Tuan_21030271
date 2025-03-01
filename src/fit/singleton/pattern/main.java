@@ -1,4 +1,4 @@
-package singleton;
+package fit.singleton.pattern;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -8,7 +8,7 @@ public class main {
 	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException  {
 		//chạy early initialization singleton
 		System.out.println("Early initialization singleton:");
-		//gọi thực hiện hàm EagerInitializedSingleton
+		//g�?i thực hiện hàm EagerInitializedSingleton
 		EagerInitializedSingleton instance = EagerInitializedSingleton.getInstance();
 		System.out.println(instance.hashCode());
 		
@@ -18,7 +18,7 @@ public class main {
 		
 		//chạy static block initialization singleton
 		System.out.println("\n Static block initialization:");
-		//gọi thực hiện hàm StaticBlockSingleton
+		//g�?i thực hiện hàm StaticBlockSingleton
 		StaticBlockSingleton instance3 = StaticBlockSingleton.getInstance();
 		System.out.println(instance3.hashCode());
 		
@@ -29,14 +29,14 @@ public class main {
 		
 //		System.out.println("\n Lazy initialization:");
 //		new Thread(() -> {
-//			// gọi thực hiện hàm LazyInitializedSingleton
+//			// g�?i thực hiện hàm LazyInitializedSingleton
 //			LazyInitializedSingleton instance5 = LazyInitializedSingleton.getInstance();
 //			System.out.println(instance5.hashCode());
 //		}).start();
 //		
 //		
 //		new Thread(() -> {
-//			// gọi thực hiện hàm LazyInitializedSingleton
+//			// g�?i thực hiện hàm LazyInitializedSingleton
 //			LazyInitializedSingleton instance5 = LazyInitializedSingleton.getInstance();
 //			System.out.println(instance5.hashCode());
 //		}).start();
@@ -44,19 +44,19 @@ public class main {
 		
 //		System.out.println("\n Thread safe initialization:");
 //		new Thread(() -> {
-//			// gọi thực hiện hàm ThreadSafeSingleton
+//			// g�?i thực hiện hàm ThreadSafeSingleton
 //			ThreadSafeSingleton instance6 = ThreadSafeSingleton.getInstance();
 //			System.out.println(instance6.hashCode());
 //		}).start();
 //		
 //		new	Thread(() -> {
-//            // gọi thực hiện hàm ThreadSafeSingleton
+//            // g�?i thực hiện hàm ThreadSafeSingleton
 //            ThreadSafeSingleton instance6 = ThreadSafeSingleton.getInstance();
 //            System.out.println(instance6.hashCode());
 //            }).start();
 		
 		System.out.println("\n Bill Pugh Singleton implementation:");
-		//gọi thực hiện hàm BillPughSingleton
+		//g�?i thực hiện hàm BillPughSingleton
 		BillPughSingleton instance7 = BillPughSingleton.getInstance();
 		System.out.println(instance7.hashCode());
 		

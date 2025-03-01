@@ -1,4 +1,4 @@
-package singleton;
+package fit.singleton.pattern;
 
 public class ThreadSafeSingleton {
 	private static ThreadSafeSingleton instance;

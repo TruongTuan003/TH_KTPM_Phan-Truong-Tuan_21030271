@@ -1,4 +1,4 @@
-package design_pattern;
+package bai1_ordermanager;
 class StrategyPattern {
     public void execute(String action) {
         switch (action) {

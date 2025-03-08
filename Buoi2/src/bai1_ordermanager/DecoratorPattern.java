@@ -1,4 +1,4 @@
-package design_pattern;
+package bai1_ordermanager;
 class DecoratorPattern {
     private Order order;
 

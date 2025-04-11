@@ -1,0 +1,10 @@
+services:
+  dockernodeapp:
+    image: dockernodeapp
+    build:
+      context: Buoi4/Bai1
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000

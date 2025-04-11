@@ -1,18 +1,10 @@
-# Sử dụng image node:18 làm base image
-FROM node:18
-
-# Thiết lập thư mục làm việc trong container
+FROM node:lts-alpine
+ENV NODE_ENV=production
 WORKDIR /usr/src/app
-
-# Sao chép package.json và cài đặt dependencies
-COPY package.json ./
-RUN npm install
-
-# Sao chép toàn bộ mã nguồn vào container
+COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
+RUN npm install --production --silent && mv node_modules ../
 COPY . .
-
-# Mở cổng 3000
 EXPOSE 3000
-
-# Lệnh chạy ứng dụng
+RUN chown -R node /usr/src/app
+USER node
 CMD ["npm", "start"]

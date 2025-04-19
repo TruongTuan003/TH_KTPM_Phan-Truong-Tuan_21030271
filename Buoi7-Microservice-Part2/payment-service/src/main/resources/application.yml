@@ -1,0 +1,41 @@
+resilience4j:
+  circuitbreaker:
+    instances:
+      paymentService:
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10000
+      circuitBreakerTest:
+        slidingWindowSize: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10000
+  retry:
+    instances:
+      paymentService:
+        maxAttempts: 3
+        waitDuration: 500
+      retryTest:
+        maxAttempts: 3
+        waitDuration: 500
+  ratelimiter:
+    instances:
+      paymentService:
+        limitForPeriod: 10
+        limitRefreshPeriod: 10000
+        timeoutDuration: 1000
+      rateLimiterTest:
+        limitForPeriod: 5
+        limitRefreshPeriod: 10000
+        timeoutDuration: 1000
+  timelimiter:
+    instances:
+      paymentService:
+        timeoutDuration: 2000
+      timeLimiterTest:
+        timeoutDuration: 2000
+
+spring:
+  application:
+    name: payment-service
+server:
+  port: 8082
